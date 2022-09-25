@@ -3,6 +3,10 @@
   font-family: var(--font-base);
 }
 
+.app__whitebg {
+  background-color: var(--white-color);
+}
+
 .app__container {
   width: 100%;
   min-height: 100vh;
