@@ -9,7 +9,7 @@ const About = () => {
   const [about, setAbout] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "abouts"] | order(_createdAt)';
     const aboutQuery = '*[_type == "about"]';
 
     client.fetch(query).then(data => {
