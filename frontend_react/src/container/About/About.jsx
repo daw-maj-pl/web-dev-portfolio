@@ -6,12 +6,18 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
+  const [about, setAbout] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
+    const aboutQuery = '*[_type == "about"]';
 
     client.fetch(query).then(data => {
       setAbouts(data);
+    });
+
+    client.fetch(aboutQuery).then(data => {
+      setAbout(data);
     });
   }, []);
 
@@ -42,6 +48,8 @@ const About = () => {
           </motion.div>
         ))}
       </div>
+
+      <p className="app__description">{about.length && about[0].description}</p>
     </>
   );
 };
