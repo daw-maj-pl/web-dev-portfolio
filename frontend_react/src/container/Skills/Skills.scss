@@ -98,26 +98,22 @@
   margin: 1rem 0;
 }
 
-.app__skills-exp-works {
-  flex: 1;
+.app__skills-exp-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  cursor: pointer;
 
-  .app__skills-exp-work {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    cursor: pointer;
+  h4 {
+    font-weight: 500;
+  }
 
-    h4 {
-      font-weight: 500;
-    }
-
-    p {
-      font-weight: 400;
-      color: var(--gray-color);
-      margin-top: 5px;
-    }
+  p {
+    font-weight: 400;
+    color: var(--gray-color);
+    margin-top: 5px;
   }
 }
 
