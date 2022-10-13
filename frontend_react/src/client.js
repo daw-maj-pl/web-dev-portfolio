@@ -6,7 +6,8 @@ export const client = sanityClient({
   dataset: 'production',
   apiVersion: '2022-09-18',
   useCdn: true,
-  token: process.env.REACT_APP_SANITY_TOKEN
+  token: process.env.REACT_APP_SANITY_TOKEN,
+  ignoreBrowserTokenWarning: true
 });
 
 const builder = imageUrlBuilder(client);
